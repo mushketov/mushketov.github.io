@@ -1,0 +1,28 @@
+.vr{
+  padding: 69px 0 141px;
+  background: black url('../images/vr/bg.png') center/cover no-repeat;
+  top: -125px;
+  position: relative;
+  &__title{
+    margin-top: -75px;
+  }
+  &__desc{
+    margin: 16px auto 90px;
+    max-width: 890px;
+    text-align: center;
+  }
+  &__preview {
+    margin: 0 auto;
+    height: 413px;
+    width: 734px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/vr/prev.png") center/cover no-repeat;
+    &__preview-icon {
+      max-width: 75px;
+      max-height: 75px;
+    }
+
+  }
+}
