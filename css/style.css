@@ -6,9 +6,11 @@
 	transition: 0.3s;
 }
 body {
-	margin: 45px 0;
+	/* margin: 45px 0; */
+	padding: 20px;
 	font-size: 16px;
-	background: #2a2d38;
+	background-color: #2a2d38;
+	/* background: url("../img/bg_dotted.png"); */
 	color: #fff;
 	font-family: 'Inter', sans-serif;
 }
@@ -46,6 +48,14 @@ h6 {
 #scrollToTopBtn:hover {
 	background-color: #0056b3;
 }
+@keyframes glow {
+	from {
+		text-shadow: 0px 0px 1px #438a5e, 0px 0px 1px #614ad3;
+	}
+	to {
+		text-shadow: 0px 0px 6px #438a5e, 0px 0px 0px #614ad3;
+	}
+}
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
@@ -54,8 +64,20 @@ h6 {
 .header {
 	margin-bottom: 30px;
 }
+.header__avatar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header__avatar-img {
+	opacity: 0.4;
+	border-radius: 50%;
+	max-width: 125px;
+	height: auto;
+	margin-bottom: 10px;
+}
 .header__title {
-    font-size: 28px;
+	font-size: 28px;
 	text-align: center;
 }
 .header__nav {
@@ -66,7 +88,7 @@ h6 {
 }
 .header__nav-item {
 	display: flex;
-    font-size: 15px;
+	font-size: 15px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -82,6 +104,7 @@ h6 {
 	justify-content: space-between;
 	gap: 20px;
 	flex-wrap: wrap;
+	/* position: relative; */
 }
 .main__block {
 	width: 45%;
@@ -95,16 +118,19 @@ h6 {
 		0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 .main__block-title {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .main__stack {
-    color: #5de587;
-    margin-bottom: 10px;
+	animation: glow 1s infinite alternate;
+	/* text-shadow: 0 0 3px; */
+	color: #5de587;
+	margin-bottom: 10px;
 }
 .main__stack-item {
-    color: #fff;
-    margin-left: 20px;
+	color: #fff;
+	margin-left: 20px;
 	margin-top: 2px;
+	text-shadow: none;
 }
 .main__block-item:first-child {
 	border-top: 1px solid #15161c47;
